@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hydronic Flow Calculator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+font-family:Arial;
+background:#eef2f6;
+padding:20px;
+}
+
+.container{
+background:white;
+padding:20px;
+border-radius:10px;
+max-width:400px;
+margin:auto;
+}
+
+h2{
+text-align:center;
+}
+
+input{
+width:100%;
+padding:10px;
+margin:10px 0;
+font-size:16px;
+}
+
+button{
+width:100%;
+padding:12px;
+background:#0077cc;
+color:white;
+border:none;
+border-radius:5px;
+font-size:16px;
+}
+
+.result{
+margin-top:20px;
+font-size:20px;
+text-align:center;
+}
+</style>
+</head>
+<body>
+<body>
+<div class="container">
+<h2>Hydronic Flow Calculator</h2>
+Heat Load (kW)
+
+
+Delta T (°C)
+
+
+Calculate
+  <div class="result" id="result"></div>
+</div>
+<script>
+
+function calc(){
+
+let kw = document.getElementById("kw").value;
+let dt = document.getElementById("dt").value;
+
+let flow = (14.3 * kw) / dt;
+
+document.getElementById("result").innerHTML =
+"Flow Rate: " + flow.toFixed(2) + " LPM";
+
+}
+
+</script>
+</body>
+</ht
